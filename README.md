@@ -1,26 +1,19 @@
 # JavaWeb
-We can use these classes collectively to create captcha image in our login page
+step 1: add class files in your project
 
-Classes can be used in following way in jsp file
-
+step 2: import MyCaptcha class to your jsp as follows
 <%@page import="professional_company.MyCaptcha"%>
-<html>
-<body>
-<br>
+
+step 3: create object of MyCaptcha class this object will contain 
+captcha characters in image as well as in string form
+
 <%
 MyCaptcha c=new MyCaptcha();
 %>
-<img alt="image not fount" src="data:image/jpg;base64, <%=c.img %>">     
-<br>
-<!--  <h1>text data is:  <%=c.text%>   </h1> -->
-<br>
-Enter captcha: <input type=text>
-<br>
-<br>
-<input type="submit">
 
-</body>
-</html>
 
-At line no 11 we created object Mycaptcha which contains captcha character string and image
-on line no 13 we include captcha image in our jsp file.
+step 4: create image tag as follows:
+
+<!-- <img alt="image not fount" src="data:image/jpg;base64, <%=c.img %>">   ignore comment -->
+
+you can get captcha characters in string form using <%c.text%>
