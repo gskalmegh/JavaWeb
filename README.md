@@ -14,6 +14,6 @@ MyCaptcha c=new MyCaptcha();
 
 step 4: create image tag as follows:
 
-<!-- <img alt="image not fount" src="data:image/jpg;base64, <%=c.img %>">   ignore comment -->
+<pre> <img alt="image not fount" src="data:image/jpg;base64, <%=c.img %>">   ignore comment </pre>
 
 you can get captcha characters in string form using <%c.text%>
